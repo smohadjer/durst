@@ -25,15 +25,10 @@ basket {
   uid
   items (array of {product_id, count}),
   customer_id
-  payment_id (optional)
+  season_id
+  payment_date
 }
 
-payment {
-  uid
-  customer_id
-  basket_id
-  date
-}
 ````
 
 
