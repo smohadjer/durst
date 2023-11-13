@@ -29,6 +29,13 @@ basket {
   payment_date
 }
 
+season {
+  uid
+  name
+  start_date
+  end_date
+}
+
 ````
 
 
