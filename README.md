@@ -1,14 +1,40 @@
 # mydrinks
 
-An app to help club players keep track of and pay for drinks they use at the club
+## Usage:
+The app's purpose is to allow club members keep track of drinks they consume during a season so that they can pay the balance at the end of the season. List and price of drinks can change only between seasons and not during a season. Payment won't be carried out in the app, so when a user clicks to pay, he is asked to enter date of bank transfer as proof of payment. Then his current basket will be marked as paid and moved to history and his current basket will be empty.  Admin will receive an email with details of payment (total, list of drinks, name of uesr and data of bank transfer).
 
-## Features
-- Available for download from iOS Store or use in browser
-- Login via email
-- Support for online payment via paypal
-- Season based
+## Database Records/Collections
 
-Usage Scenario:
-Admin purchases drinks for sale at the club. Members keep track of drinks they consume in the app. At the end of the year or season they are asked to pay. Prices and/or list of drinks can change in new year. Admin should purchase drinks if App shows he is running out of inventory.
+````
+product {
+  uid
+  name
+  price
+  status (available, out-of-stock, discontinued)
+}
+
+customer {
+  uid
+  username
+  password
+  favourites (array of product ids)
+  basket_id
+}
+
+basket {
+  uid
+  items (array of {product_id, count}),
+  customer_id
+  payment_id (optional)
+}
+
+payment {
+  uid
+  customer_id
+  basket_id
+  date
+}
+````
+
 
 
