@@ -7,31 +7,33 @@ Admin purchases drinks for sale at the club. Members keep track of drinks they c
 Design should be able to answer following questions:
 - What happens when price of a product changes?
 
-product {
- id: uid,
- name: string,
- price: number
- status: enum (available, out-of-stock, discontinued)
+````
+product {  
+  uid  
+  name  
+  price  
+  status (available, out-of-stock, discontinued)  
 }
 
-customer {
- id: uid,
- username: string,
- password: string,
- favourites: [product_id],
-   basket_id
+customer {  
+  uid  
+  username  
+  password  
+  favourites (array of product ids)  
+  basket_id
 }
 
 basket {
-  id,
-  items: [{product_id, count}],
- customer_id,
-   payment_id?
+  uid
+  items (array of {product_id, count}),
+  customer_id
+  payment_id (optional)
 }
 
 payment {
-id: uid,
-customer_id: uid,
-basket_id: uid,
-date: date
+  uid
+  customer_id
+  basket_id
+  date
 }
+````
