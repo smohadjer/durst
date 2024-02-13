@@ -2,11 +2,6 @@
 
 Durst is a minimal shop to allow club members purchase drinks at their club. It is built using MERN stack (MongoDB, Express, React, Node.js).
 
-A product's price can not be changed. When we need to change the price we
-must create a new product with a new uid and set the old product's status to
-discontinued so it can not be ordered with the old price anymore. This will
-ensure old orders show correct prices.
-
 ### Database Design
 ````
 Interface Product {
