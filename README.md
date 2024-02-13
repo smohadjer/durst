@@ -12,8 +12,8 @@ ensure old orders show correct prices.
 Interface Product {
   uid: string;
   name: string;
-  price: number;
   image: string;
+  price: number;
   status: string; (AVAILABLE | OUTOFSTOCK | DISCONTINUED)
 }
 
@@ -23,17 +23,18 @@ Interface Customer {
   password: string;
 }
 
-Interface Basket {
+Interface Order {
   uid: string;
   customer_id: string;
   paid_date: date;
   status: pending | paid;
 }
 
-Interface BasketItems {
+Interface OrderedItems {
   uid: string;
-  basket_id: string;
+  order_id: string;
   product_id: string;
+  product_price: number;
   count: number;
 }
 
