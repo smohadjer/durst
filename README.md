@@ -23,19 +23,18 @@ Interface Customer {
   password: string;
 }
 
-Interface Order {
+Interface Basket {
   uid: string;
   customer_id: string;
-  issued_date: date;
   paid_date: date;
   status: pending | paid;
 }
 
-Interface OrderItems {
+Interface BasketItems {
   uid: string;
+  basket_id: string;
   product_id: string;
   count: number;
-  order_id: string;
 }
 
 ````
@@ -43,8 +42,8 @@ Interface OrderItems {
 ### Views
 - login/register
 - products listing
-- basket (shows current pending order)
-- orders listing
+- basket
+- purchase history (shows old paid baskets)
 - payment
 - profile
 
@@ -54,8 +53,8 @@ Interface OrderItems {
 - /api/logout
 - /products
 - /products/:id
-- /orders
-- /orders/:id
+- /baskets
+- /basket/:id
 
 
 
