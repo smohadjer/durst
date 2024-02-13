@@ -1,0 +1,18 @@
+{
+  "name": "durst",
+  "version": "1.0.0",
+  "description": "Durst is a minimal shop to allow the club members to purchase drinks at the club. It is built using MERN stack (MongoDB, Express, React, Node.js).",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
