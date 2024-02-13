@@ -2,34 +2,37 @@
 
 Durst is a minimal shop to allow club members purchase drinks at their club. It is built using MERN stack (MongoDB, Express, React, Node.js).
 
-### Database Design
+### Database Model
 ````
-Interface Product {
-  uid: string;
+type ProductState: 'available' | 'out-of-stock' | 'discontinued';
+type OrderState: 'pending' | 'paid';
+
+interface Product {
+  id: string;
   name: string;
-  image: string;
+  image?: string;
   price: number;
-  status: string; (AVAILABLE | OUTOFSTOCK | DISCONTINUED)
+  state: ProductState;
 }
 
-Interface Customer {
-  uid: string;
+interface Customer {
+  id: string;
   username: string;
   password: string;
 }
 
-Interface Order {
-  uid: string;
-  customer_id: string;
-  paid_date: date;
-  status: pending | paid;
+interface Order {
+  id: string;
+  customerId: string;
+  paidDate?: date;
+  state: OrderState;
 }
 
-Interface OrderedItems {
-  uid: string;
-  order_id: string;
-  product_id: string;
-  product_price: number;
+interface OrderedItems {
+  id: string;
+  orderId: string;
+  productId: string;
+  productPrice: number;
   count: number;
 }
 
