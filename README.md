@@ -1,6 +1,6 @@
 # Durst
 
-Durst is a minimal shop to allow club members purchase drinks at their club. It is built using MERN stack (MongoDB, Express, React, Node.js).
+Durst is a minimal shop to allow the club members to purchase drinks at the club. It is built using MERN stack (MongoDB, Express, React, Node.js).
 
 ### Database Model
 ````
