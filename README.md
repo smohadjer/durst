@@ -1,12 +1,8 @@
 # Durst
 
-<<<<<<< HEAD
 https://durst.smohadjer.de/
 
-Durst is a minimal shop to allow the club members to purchase drinks at the club. It is built using MERN stack (MongoDB, Express, React, Node.js).
-=======
-Durst is a single page app that allows club members to purchase drinks at the club. It is built using MVC and MERN stack (MongoDB, Express, React, Node.js).
->>>>>>> 65d4332b3ac13b8ac73929f6cae782415730ca04
+Durst is a single page app that allows club members to buy drinks at the club. 
 
 ### Database Model
 ````
